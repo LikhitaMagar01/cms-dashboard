@@ -146,3 +146,5 @@ npx shadcn-vue@latest add [component-name]
 ## License
 
 Private project
+
+redeploy
