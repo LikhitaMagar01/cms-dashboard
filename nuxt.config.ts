@@ -1,4 +1,4 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+// @ts-ignore
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
@@ -15,5 +15,9 @@ export default defineNuxtConfig({
   shadcn: {
     prefix: '',
     componentDir: '@/components/ui'
+  },
+
+  nitro: {
+    preset: 'netlify'
   }
 })
