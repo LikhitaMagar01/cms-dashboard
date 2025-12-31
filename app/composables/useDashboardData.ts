@@ -42,7 +42,9 @@ export const useDashboardData = () => {
     { name: 'Amerika', flag: '🇺🇸', value: 125 },
     { name: 'Kanada', flag: '🇨🇦', value: 86 },
     { name: 'Birleşik Krallık', flag: '🇬🇧', value: 78 },
-    { name: 'Almanya', flag: '🇩🇪', value: 67 }
+    { name: 'Almanya', flag: '🇩🇪', value: 67 },
+    { name: 'Fransa', flag: '🇫🇷', value: 55 },
+    { name: 'Japonya', flag: '🇯🇵', value: 43 }
   ]
 
   const activities: Activity[] = [
