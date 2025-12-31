@@ -13,10 +13,10 @@
           <StatsCards v-model:active-card-index="activeCardIndex" />
 
           <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <div class="sm:col-span-1 md:col-span-1 lg:col-span-2">
+            <div class="sm:col-span-1 md:col-span-1 lg:col-span-2 h-full">
               <TrafficChart :active-card-index="activeCardIndex" />
             </div>
-            <div class="sm:col-span-1 md:col-span-1 lg:col-span-1">
+            <div class="sm:col-span-1 md:col-span-1 lg:col-span-1 h-full">
               <CountriesList />
             </div>
           </div>

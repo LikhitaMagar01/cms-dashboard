@@ -1,5 +1,5 @@
 <template>
-  <Card>
+  <Card class="h-full">
     <CardHeader>
       <div class="flex items-center justify-between !flex-wrap">
         <CardTitle>{{ chartTitle }}</CardTitle>
@@ -31,7 +31,7 @@
         </div>
       </div>
     </CardHeader>
-    <CardContent>
+    <CardContent class="flex items-center justify-center flex-1">
       <div class="h-[200px] md:h-[250px] lg:h-[300px] w-full">
         <LineChart :data="chartData as ChartData<'line'>" :options="chartOptions" />
       </div>
