@@ -19,7 +19,6 @@ A modern, responsive dashboard built with Nuxt 4 (vue 3 in composition API), sha
 - **Styling**: TailwindCSS 4.1.18
 - **Charts**: Chart.js 4.5.1 + vue-chartjs 5.3.3
 - **Icons**: lucide-vue-next
-- **State Management**: Vue 3 Composition API
 
 ## Setup
 
@@ -146,5 +145,8 @@ npx shadcn-vue@latest add [component-name]
 ## License
 
 Private project
+
+## netlify link
+https://delicate-cobbler-2119a8.netlify.app/
 
 redeploy
