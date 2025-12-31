@@ -1,7 +1,15 @@
 <template>
   <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-    <Card v-for="stat in stats" :key="stat.title" class="bg-card">
-      <CardContent class="p-6">
+    <Card 
+      v-for="(stat, index) in stats" 
+      :key="stat.title" 
+      :class="[
+        'cursor-pointer transition-all',
+        activeCardIndex === index ? '!bg-blue-50' : 'bg-card'
+      ]"
+      @click="selectCard(index)"
+    >
+      <CardContent>
         <div class="space-y-2">
           <p class="text-sm text-muted-foreground">{{ stat.title }}</p>
           <div class="flex items-end justify-between">
@@ -22,4 +30,10 @@
 import { TrendingUp, TrendingDown } from 'lucide-vue-next'
 
 const { stats } = useDashboardData()
+
+const activeCardIndex = defineModel<number>('activeCardIndex', { default: 0 })
+
+const selectCard = (index: number) => {
+  activeCardIndex.value = index
+}
 </script>

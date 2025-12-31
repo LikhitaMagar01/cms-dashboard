@@ -10,13 +10,13 @@
         </header>
 
         <main class="flex-1 space-y-6 p-6">
-          <StatsCards />
+          <StatsCards v-model:active-card-index="activeCardIndex" />
 
-          <div class="grid gap-6 lg:grid-cols-3">
-            <div class="lg:col-span-2">
-              <TrafficChart />
+          <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class="sm:col-span-1 md:col-span-1 lg:col-span-2">
+              <TrafficChart :active-card-index="activeCardIndex" />
             </div>
-            <div>
+            <div class="sm:col-span-1 md:col-span-1 lg:col-span-1">
               <CountriesList />
             </div>
           </div>
@@ -29,4 +29,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+
+const activeCardIndex = ref(0)
 </script>

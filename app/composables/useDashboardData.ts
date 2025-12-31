@@ -81,29 +81,86 @@ export const useDashboardData = () => {
   ]
 
   // Chart.js compatible data - specifically typed for line chart
-  const chartData: ChartData<'line'> = {
-    labels: ['08:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'],
-    datasets: [
-      {
-        label: 'Trafik',
-        data: [510, 518, 520, 515, 522, 528, 530, 526, 532, 520, 515, 540],
-        borderColor: '#3b82f6',
-        backgroundColor: 'transparent',
-        tension: 0.4,
-        fill: false,
-        pointRadius: 0,
-        pointHoverRadius: 5,
-        pointHoverBackgroundColor: '#3b82f6',
-        pointHoverBorderColor: '#fff',
-        pointHoverBorderWidth: 2,
-      }
-    ]
-  }
+  const chartDatasets = [
+    // Toplam trafik
+    {
+      labels: ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'],
+      datasets: [
+        {
+          label: 'Toplam trafik',
+          data: [510, 518, 520, 515, 522, 528, 530, 526, 532, 520, 515, 540],
+          borderColor: '#3b82f6',
+          backgroundColor: 'transparent',
+          tension: 0.4,
+          fill: false,
+          pointRadius: 0,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: '#3b82f6',
+          pointHoverBorderColor: '#fff',
+          pointHoverBorderWidth: 2,
+        }
+      ]
+    },
+    {
+      labels: ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'],
+      datasets: [
+        {
+          label: 'Potansiyel müşteriler',
+          data: [18, 20, 22, 19, 24, 26, 23, 25, 24, 26, 25, 26],
+          borderColor: '#3b82f6',
+          backgroundColor: 'transparent',
+          tension: 0.4,
+          fill: false,
+          pointRadius: 0,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: '#3b82f6',
+          pointHoverBorderColor: '#fff',
+          pointHoverBorderWidth: 2,
+        }
+      ]
+    },
+    {
+      labels: ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'],
+      datasets: [
+        {
+          label: 'Harcanan ortalama zaman',
+          data: [95, 98, 102, 97, 94, 90, 88, 92, 89, 87, 85, 83],
+          borderColor: '#3b82f6',
+          backgroundColor: 'transparent',
+          tension: 0.4,
+          fill: false,
+          pointRadius: 0,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: '#3b82f6',
+          pointHoverBorderColor: '#fff',
+          pointHoverBorderWidth: 2,
+        }
+      ]
+    },
+    {
+      labels: ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'],
+      datasets: [
+        {
+          label: 'Dönüşüm oranı',
+          data: [4.8, 4.9, 5.0, 5.1, 5.0, 5.2, 5.1, 5.15, 5.2, 5.18, 5.16, 5.16],
+          borderColor: '#3b82f6',
+          backgroundColor: 'transparent',
+          tension: 0.4,
+          fill: false,
+          pointRadius: 0,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: '#3b82f6',
+          pointHoverBorderColor: '#fff',
+          pointHoverBorderWidth: 2,
+        }
+      ]
+    }
+  ]
 
   return {
     stats,
     countries,
     activities,
-    chartData
+    chartDatasets
   }
 }

@@ -14,15 +14,28 @@
     <SidebarContent class="px-3 py-4">
       <SidebarGroup>
         <SidebarMenu class="space-y-1">
-          <SidebarMenuItem v-for="item in menuItems" :key="item.title">
+          <SidebarMenuItem v-for="(item, index) in menuItems" :key="item.title">
             <SidebarMenuButton 
               :is-active="item.isActive"
               as-child
-              class="w-full justify-start gap-3 px-3 py-2 text-sm"
+              :class="[
+                'w-full justify-start gap-3 px-3 py-2 text-sm',
+                item.isActive && index === 0 ? 'bg-blue-100 hover:bg-blue-100' : 'hover:bg-accent'
+              ]"
             >
               <a :href="item.url">
-                <component :is="item.icon" class="h-4 w-4 shrink-0" />
-                <span>{{ item.title }}</span>
+                <component 
+                  :is="item.icon" 
+                  :class="[
+                    'h-4 w-4 shrink-0',
+                    item.isActive && index === 0 ? '!text-blue-600' : 'text-muted-foreground'
+                  ]" 
+                />
+                <span 
+                  :class="[
+                    item.isActive && index === 0 ? '!text-blue-600 !font-medium' : 'text-muted-foreground'
+                  ]"
+                >{{ item.title }}</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -41,7 +54,7 @@
           <span class="truncate text-xs text-muted-foreground">Product Designer</span>
         </div>
       </div>
-      <Button variant="outline" size="sm" class="w-full">
+      <Button variant="outline" size="sm" class="w-full !border-blue-500 !text-blue-600">
         Görüntüle
       </Button>
     </SidebarFooter>
