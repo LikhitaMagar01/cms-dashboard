@@ -1,5 +1,5 @@
 <template>
-  <Card>
+  <Card class="flex flex-col h-full">
     <CardHeader>
       <div class="flex items-center justify-between">
         <CardTitle class="text-base font-semibold">Ülkelere göre...</CardTitle>
@@ -8,7 +8,7 @@
         </Button>
       </div>
     </CardHeader>
-    <CardContent>
+    <CardContent class="flex-1 flex flex-col justify-between">
       <div class="space-y-4">
         <div
           v-for="(country, index) in countries"
